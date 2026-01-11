@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>STYO COLLECTION</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+
+</head>
+<body>
+
+    <header>
+    <nav class="nav-container">
+        <div class="logo">
+            <a href="#">STYO<span> COLLECTION</span></a>
+        </div>
+        
+        <ul class="nav-links" id="navLinks">
+            <li class="mobile-only close-menu" onclick="toggleMenu()">&times; Tutup</li>
+            <li><a href="#" onclick="toggleMenu()">Beranda</a></li>
+            <li><a href="#katalog" onclick="toggleMenu()">Koleksi</a></li>
+            <li><a href="keaslian.html" onclick="toggleMenu()">Cek Keaslian</a></li>
+            <li><a href="contohdb.html" onclick="toggleMenu()">Cek contohdb</a></li>
+        </ul>
+
+        <div class="nav-icons">
+            <div class="cart-wrapper" onclick="openCart()">
+                👜 <span id="cart-count">0</span>
+            </div>
+            
+            <div class="menu-toggle" id="mobile-menu" onclick="toggleMenu()">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </nav>
+    <div class="nav-overlay" id="navOverlay" onclick="toggleMenu()"></div>
+</header>
+
+
+
+    <div class="slideshow-container">
+  <div class="mySlides fade">
+    <img src="img/1.jpg" style="width:100%">
+    <div class="text">Perkenalan</div>
+  </div>
+
+  <div class="mySlides fade">
+    <img src="img/2.jpg" style="width:100%">
+    <div class="text">Tentang Brand</div>
+  </div>
+  <div class="mySlides fade">
+    <img src="img/3.jpg" style="width:100%">
+    <div class="text">Kontak</div>
+  </div>
+
+  <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+  <a class="next" onclick="plusSlides(1)">&#10095;</a>
+</div>
+
+<div style="text-align:center">
+  <span class="dot" onclick="currentSlide(1)"></span>
+  <span class="dot" onclick="currentSlide(2)"></span>
+</div>
+
+    <section class="container" id="katalog">
+        <div class="section-title"><h2>Signature Collection</h2></div>
+        <div class="product-grid" id="product-container"></div>
+    </section>
+
+    <div id="detail-modal" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeDetail()">&times;</span>
+            <div class="detail-flex">
+                <div class="product-gallery">
+                    <div class="gallery-container" id="modal-gallery-container"></div>
+                    <div class="gallery-nav">
+                        <button class="nav-btn" onclick="prevImg()">❮</button>
+                        <button class="nav-btn" onclick="nextImg()">❯</button>
+                    </div>
+                </div>
+                <div class="info-aside">
+                    <h2 id="modal-nama"></h2>
+                    <p id="modal-harga" class="price"></p>
+                    <p id="modal-deskripsi"></p>
+                    <div id="modal-btn-container"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="cart-sidebar" class="sidebar">
+        <div class="sidebar-header"><h3>Keranjang</h3><span onclick="closeCart()">×</span></div>
+        <div id="cart-items-list" class="cart-body"></div>
+        <div class="sidebar-footer">
+            <div class="total-box"><span>Total:</span> <span id="total-price">Rp 0</span></div>
+            <button class="add-btn" onclick="sendToWA()" style="background:var(--accent)">Order via WhatsApp</button>
+        </div>
+    </div>
+    <footer>
+      
+    <div class="footer-section">
+    <h4>Hubungi Kami</h4>
+    <p>📍 Pemalang, Jawa Tengah</p>
+    <p>📱 WA: 0895-3401-94398</p>
+    
+    <div class="social-icons">
+        <a href="https://instagram.com/username_kamu" target="_blank" title="Instagram">
+            <i class="fab fa-instagram"></i>
+        </a>
+        <a href="https://facebook.com/username_kamu" target="_blank" title="Facebook">
+            <i class="fab fa-facebook"></i>
+        </a>
+        <a href="https://wa.me/62895340194398" target="_blank" title="WhatsApp">
+            <i class="fab fa-whatsapp"></i>
+        </a>
+    </div>
+</div>
+    </footer>
+
+    
+    <script src="products.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
