@@ -1,4 +1,4 @@
-let cart = JSON.parse(localStorage.getItem('styo_cart')) || [];
+let cart = JSON.parse(localStorage.getItem('FaLys_cart')) || [];
 let currentImgIdx = 0;
 let totalModalImgs = 0;
 
@@ -57,7 +57,7 @@ function removeFromCart(id) {
 }
 
 function updateUI() {
-    localStorage.setItem('styo_cart', JSON.stringify(cart));
+    localStorage.setItem('FaLys_cart', JSON.stringify(cart));
     const countEl = document.getElementById('cart-count');
     if(countEl) countEl.innerText = cart.length;
     const listContainer = document.getElementById('cart-items-list');
@@ -102,7 +102,7 @@ function updateUI() {
             <p style="font-weight:bold; margin-bottom:8px;">Opsi Bahan Kain:</p>
             <div style="margin-bottom:15px;">
                 <label style="display:block; margin-bottom:5px;"><input type="radio" name="opsi-kain" value="Kain Sendiri" checked> Pakai Kain Sendiri (Jasa Jahit)</label>
-                <label style="display:block;"><input type="radio" name="opsi-kain" value="Kain dari Toko"> Kain dari Styo Collection</label>
+                <label style="display:block;"><input type="radio" name="opsi-kain" value="Kain dari Toko"> Kain dari FaLys Collection</label>
             </div>
 
             <p style="font-weight:bold; margin-bottom:5px;">Catatan Tambahan:</p>
@@ -137,7 +137,7 @@ function sendToWA() {
     }
     
     const nomorWA = "62895340194398";
-    let pesan = `*ORDER BARU - STYO COLLECTION*\n`;
+    let pesan = `*ORDER BARU - FaLys COLLECTION*\n`;
     pesan += `----------------------------------\n`;
     pesan += `*Nama:* ${nama}\n`;
     pesan += `*Alamat:* ${alamat}\n`;
